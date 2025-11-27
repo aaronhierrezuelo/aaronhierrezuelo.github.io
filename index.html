@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aarón Hierrezuelo - Portfolio</title>
 
 <style>
+/* GENERAL */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f5f7fa;
+    background: #f4f7f5;
     color: #222;
     line-height: 1.6;
+}
+
+/* THEME COLOR */
+:root {
+    --main-color: #4da980;   /* soft green */
+    --main-hover: #3d8a68;
 }
 
 /* HEADER */
@@ -29,7 +36,7 @@ header {
 header h1 {
     font-size: 1.6rem;
     margin: 0;
-    color: #0057b7;
+    color: var(--main-color);
 }
 
 nav a {
@@ -37,25 +44,32 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     color: #333;
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: var(--main-hover);
 }
 
-/* CONTENT */
+/* SECTIONS */
 section {
     max-width: 900px;
     margin: 2rem auto;
     background: white;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    border: 1px solid #e3e3e3;
 }
 
 h2 {
     margin-top: 0;
-    color: #0057b7;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+h3 {
+    margin-bottom: 0.3rem;
+    color: #333;
 }
 
 /* FOOTER */
@@ -64,6 +78,7 @@ footer {
     padding: 2rem;
     color: #666;
     font-size: 0.9rem;
+    margin-top: 2rem;
 }
 </style>
 </head>
@@ -73,60 +88,60 @@ footer {
 <header>
     <h1>Aarón Hierrezuelo</h1>
     <nav>
-        <a href="#about">Sobre mí</a>
-        <a href="#projects">Proyectos</a>
+        <a href="#about">About</a>
+        <a href="#projects">Research & Projects</a>
         <a href="#cv">CV</a>
-        <a href="#contact">Contacto</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- SOBRE MI -->
+<!-- ABOUT -->
 <section id="about">
-    <h2>Sobre mí</h2>
+    <h2>About</h2>
     <p>
-        Soy analista y científico de datos, interesado en machine learning, econometría,
-        inferencia causal y análisis aplicado.  
-        Actualmente curso la Maestría en Ciencia de Datos en UDESA.
+        I am an economist currently pursuing a Master's degree in Data Science at Universidad de San Andrés (UdeSA).
+        My main interests include machine learning, artificial intelligence, applied econometrics, and understanding
+        the theoretical and practical behavior of predictive and causal models.
     </p>
 </section>
 
-<!-- PROYECTOS -->
+<!-- PROJECTS -->
 <section id="projects">
-    <h2>Proyectos</h2>
+    <h2>Research & Projects</h2>
 
-    <h3>📌 Análisis causal de la apertura dominical</h3>
-    <p>Evaluación del impacto económico mediante Difference-in-Differences y Synthetic Control.</p>
+    <h3>Causal Impact of Sunday Business Openings</h3>
+    <p>Empirical evaluation of local economic activity using Difference-in-Differences and Synthetic Control methods.</p>
 
-    <h3>📌 Predicción de demanda</h3>
-    <p>Modelos ML aplicados a series temporales, pipeline completo de datos.</p>
+    <h3>Demand Forecasting Models</h3>
+    <p>Time series modeling and ML-based forecasting pipelines for operational decision-making.</p>
 
-    <h3>📌 NLP para clasificación de texto</h3>
-    <p>Uso de modelos BERT para análisis de intención en clientes.</p>
+    <h3>Natural Language Processing for Text Classification</h3>
+    <p>Text classification using modern transformer-based architectures such as BERT.</p>
 </section>
 
 <!-- CV -->
 <section id="cv">
     <h2>Curriculum Vitae</h2>
     <p>
-        Podés descargar mi CV actualizado acá:  
-        <a href="asset/pdf/CV_Aaron_Hierrezuelo_English.pdf" target="_blank">
-            👉 Descargar CV (PDF)
+        You can download my updated CV here:  
+        <a href="asset/pdf/CV_Aaron_Hierrezuelo_English.pdf" target="_blank" style="color: var(--main-color); font-weight: bold;">
+            Download CV (PDF)
         </a>
     </p>
 </section>
 
-<!-- CONTACTO -->
+<!-- CONTACT -->
 <section id="contact">
-    <h2>Contacto</h2>
+    <h2>Contact</h2>
     <p>
-        📧 <strong>aa.hierrezuelo@gmail.com</strong><br>
-        🔗 <a href="https://www.linkedin.com/in/aar%C3%B3n-accattoli-hierrezuelo-6212341b7/" target="_blank">LinkedIn</a><br>
-        🐙 <a href="https://github.com/aaronhierrezuelo" target="_blank">GitHub</a>
+        Email: <strong>aa.hierrezuelo@gmail.com</strong><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/aar%C3%B3n-accattoli-hierrezuelo-6212341b7/" target="_blank" style="color: var(--main-color);">Profile</a><br>
+        GitHub: <a href="https://github.com/aaronhierrezuelo" target="_blank" style="color: var(--main-color);">aaronhierrezuelo</a>
     </p>
 </section>
 
 <footer>
-    © 2025 Aarón Hierrezuelo. Portfolio personal.
+    © 2025 Aarón Hierrezuelo — Personal Portfolio.
 </footer>
 
 </body>
